@@ -1,0 +1,498 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 5 of Elec 430</title>
+  
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>98bf5c22-e3b0-49ab-b58c-cc1b04761783</md:uuid>
+</metadata>
+
+  <content>
+    <section id="prob1">
+      <title>Problem 1</title>
+      
+      <para id="prob1para1">
+        Consider a ternary communication system where the source
+        produces three possible symbols: 0, 1, 2.
+      </para>
+
+      <para id="prob1parta">
+        a)  Assign three modulation signals
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>,
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>, and
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>3</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        defined on
+        <m:math>
+          <m:apply>
+            <m:in/>
+	    <m:ci>t</m:ci>
+	    <m:interval>
+	      <m:cn>0</m:cn>
+	      <m:ci>T</m:ci>
+	    </m:interval>
+          </m:apply>
+        </m:math>
+        to these symbols, 0, 1, and 2, respectively. Make sure that
+        these signals are not orthogonal and assume that the symbols
+        have an equal probability of being generated.
+      </para>
+      
+      <para id="prob1partb">
+        b) Consider an orthonormal basis
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>ψ</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>,
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>ψ</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>, ...,
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>ψ</m:mi>
+                <m:mn>N</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        to represent these three signals.  Obviously
+        <m:math><m:ci>N</m:ci></m:math> could be either 1, 2, or 3.
+      </para>
+      
+      <figure id="fig1">
+        <media id="idp8244784" alt=""><image src="../../media/HW5Fig1.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <para id="prob1partb2">
+        Now consider two different receivers to decide which one of
+        the symbols were transmitted when
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>r</m:mi>
+		<m:mi>t</m:mi>
+	      </m:msub>
+	    </m:ci>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mi>m</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>N</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>
+        is received where 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>m</m:ci>
+	    <m:set>
+	      <m:cn>1</m:cn>
+	      <m:cn>2</m:cn>
+	      <m:cn>3</m:cn>
+	    </m:set>
+	  </m:apply>
+	</m:math> and
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>N</m:mi>
+              <m:mi>t</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is a zero mean white Gaussian process with
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>S</m:mi>
+		  <m:mi>N</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>f</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>N</m:mi>
+		  <m:mn>0</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:cn>2</m:cn>
+	    </m:apply>
+          </m:apply>
+        </m:math>
+        for all <m:math><m:ci>f</m:ci></m:math>.  What is
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mi fontweight="bold">r</m:mi>
+                <m:mo>|</m:mo>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        and what is
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>f</m:mi>
+              <m:mrow>
+                <m:mi fontweight="bold">Y</m:mi>
+                <m:mo>|</m:mo>
+                <m:mrow>
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                  <m:mo>(</m:mo>
+                  <m:mi>t</m:mi>
+                  <m:mo>)</m:mo>
+                </m:mrow>
+              </m:mrow>
+            </m:msub>
+          </m:ci>
+        </m:math>?
+      </para>
+      
+      <figure id="fig2">
+        <media id="idp8973200" alt=""><image src="../../media/HW5Fig2.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <para id="prob1partc">
+        Find the probability that
+        <m:math>
+          <m:apply>
+            <m:neq/>
+	    <m:ci>
+	      <m:mover>
+		<m:mi>m</m:mi>
+		<m:mo>^</m:mo>
+	      </m:mover>
+	    </m:ci>
+	    <m:ci>m</m:ci>
+          </m:apply>
+        </m:math>
+        for both receivers.
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>P</m:mi>
+		<m:mi>e</m:mi>
+	      </m:msub>
+	    </m:ci>
+	    <m:apply>
+	      <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+	      <m:apply>
+		<m:neq/>
+		<m:ci>
+		  <m:mover>
+		    <m:mi>m</m:mi>
+		    <m:mo>^</m:mo>
+		  </m:mover>
+		</m:ci>
+		<m:ci>m</m:ci>
+	      </m:apply>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+        
+      </para>
+    </section>
+    
+    <section id="prob2">
+      <title>Problem 2</title>
+      
+      <para id="prob2para">
+        Proakis and Salehi problems 7.18, 7.26, and 7.32
+      </para>
+    </section>
+    
+    <section id="prob3">
+      <title>Problem 3</title>
+      
+      <para id="prob3para">
+        Suppose our modulation signals are
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        and
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        where
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:exp/>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>t</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+          </m:apply>
+        </m:math>
+        for all <m:math><m:ci>t</m:ci></m:math> and
+	<m:math display="inline">
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>2</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:minus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+        The channel noise is AWGN with zero mean and spectral height
+        <m:math>
+          <m:apply>
+            <m:divide/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>N</m:mi>
+		<m:mn>0</m:mn>
+	      </m:msub>
+	    </m:ci>
+	    <m:cn>2</m:cn>
+          </m:apply>
+        </m:math>.
+        The signals are transmitted equally likely.
+      </para>
+      
+      <figure id="fig3">
+        <media id="idp7753616" alt=""><image src="../../media/HW5Fig3.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <para id="prob3parta">
+        Find the impulse response of the optimum filter.  Find the
+        signal component of the output of the matched filter at
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>t</m:ci>
+	    <m:ci>T</m:ci>
+          </m:apply>
+        </m:math>
+        where
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        is transmitted; <foreign>i.e.</foreign>,
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>u</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>.
+        Find the probability of error
+        <m:math>
+          <m:apply>
+	      <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+            <m:apply>
+              <m:neq/>
+	      <m:ci>
+		<m:mover>
+		  <m:mi>m</m:mi>
+		  <m:mo>^</m:mo>
+		</m:mover>
+	      </m:ci>
+	      <m:ci>m</m:ci>
+            </m:apply>
+          </m:apply>
+        </m:math>.
+      </para>
+      
+      <para id="prob3partb">
+        In this part, assume that the power spectral density of the
+        noise is not flat and in fact is
+        <equation id="eq1">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>S</m:mi>
+		    <m:mi>N</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>f</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:divide/>
+		<m:cn>1</m:cn>
+		<m:apply>
+		  <m:plus/>
+		  <m:apply>
+		    <m:power/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		    </m:apply>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:power/>
+		    <m:ci>α</m:ci>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+        for all <m:math><m:ci>f</m:ci></m:math>, where
+        <m:math><m:ci>α</m:ci></m:math> is real and positive. Can
+        you show that the optimum filter in this case is a cascade of
+        two filters, one to whiten the noise and one to match to the
+        signal at the output of the whitening filter?
+      </para>
+      
+      <figure id="fig4">
+        <media id="idp1565664" alt=""><image src="../../media/HW5Fig4.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <para id="prob3partc">
+        c) Find an expression for the probability of error.
+      </para>
+    </section>
+    
+  </content>
+</document>

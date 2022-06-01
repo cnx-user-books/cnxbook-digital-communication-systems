@@ -1,0 +1,550 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 6 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>9f4e3939-147d-481e-a5e2-5a0cb01ab88f</md:uuid>
+</metadata>
+
+  <content>
+
+    <para id="para1">
+      Homework set 6 of ELEC 430, Rice University, Department of Electrical and
+      Computer Engineering
+    </para>
+
+    <section id="sec1">
+      <title>Problem 1</title>
+
+      <para id="sec1para1">
+        Consider the following modulation system
+        <equation id="sec1eq1">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>A</m:ci>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>P</m:mi>
+			<m:mi>T</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>t</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:cn>1</m:cn>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        and
+
+        <equation id="sec1eq2">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:minus/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>P</m:mi>
+			  <m:mi>T</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:cn>1</m:cn>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        for
+
+        <m:math>
+          <m:apply>
+            <m:leq/>
+              <m:cn>0</m:cn>
+              <m:ci>t</m:ci>
+              <m:ci>T</m:ci>
+          </m:apply>
+        </m:math>
+
+        where
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>T</m:mi>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:piecewise>
+                <m:piece>
+                  <m:cn>1</m:cn>
+                  <m:apply>
+                    <m:leq/>
+                      <m:cn>0</m:cn>
+                      <m:ci>t</m:ci>
+                      <m:ci>T</m:ci>
+                  </m:apply>
+                </m:piece>
+                <m:otherwise>
+                  <m:cn>0</m:cn>
+                </m:otherwise>
+              </m:piecewise>
+          </m:apply>
+        </m:math>
+
+      </para>
+
+      <figure id="fig1">
+        <media id="idp2979920" alt=""><image src="../../media/Fig1.png" mime-type="image/png"/></media>
+      </figure>
+
+      <para id="sec1para2">
+        The channel is ideal with Gaussian noise which is
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>μ</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:cn>1</m:cn>
+          </m:apply>
+        </m:math>
+        for all
+        <m:math>
+          <m:ci>t</m:ci>
+        </m:math>,
+        wide sense stationary with
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>R</m:mi>
+		  <m:mi>N</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>τ</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:apply>
+		<m:power/>
+		<m:ci>b</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+	      <m:apply>
+		<m:exp/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:ci>τ</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>              
+          </m:apply>
+        </m:math>
+        for all
+        <m:math>
+          <m:apply>
+            <m:in/>
+              <m:ci>τ</m:ci>
+              <m:reals/>
+          </m:apply>
+        </m:math>.
+        Consider the following receiver structure
+      </para>
+
+      <figure id="fig2" orient="horizontal">
+        <subfigure id="fig2sub1">
+	  <table frame="none" id="sec1tab" summary="">
+	    <tgroup cols="1">
+	      <tbody>
+		<row>
+		  <entry>
+		    <m:math>
+		      <m:apply>
+			<m:eq/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>r</m:mi>
+			    <m:mi>t</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:apply>
+			  <m:plus/>
+			  <m:apply>
+			    <m:ci type="fn">
+			      <m:msub>
+				<m:mi>s</m:mi>
+				<m:mi>m</m:mi>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>t</m:ci>
+			  </m:apply>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>N</m:mi>
+			      <m:mi>t</m:mi>
+			    </m:msub>
+			  </m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:math>
+		  </entry>
+		</row>
+	      </tbody>
+	    </tgroup>
+	  </table>
+        </subfigure>
+        <subfigure id="fig2sub2">
+           <media id="idp496976" alt=""><image src="../../media/Fig2.png" mime-type="image/png"/></media>
+        </subfigure>
+      </figure>
+
+      <list id="sec1list" list-type="bulleted">
+        <item> a) Find the optimum value of the threshold for the
+          system (<foreign>e.g.</foreign>,
+          <m:math><m:ci>γ</m:ci></m:math> that minimizes the
+          <m:math>
+            <m:ci>
+              <m:msub>
+                <m:mi>P</m:mi>
+                <m:mi>e</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>).
+          Assume that
+          <m:math>
+            <m:apply>
+              <m:eq/>
+                <m:ci>
+                  <m:msub>
+                    <m:mi>π</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>
+                  <m:msub>
+                    <m:mi>π</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:ci>
+            </m:apply>
+          </m:math>
+        </item>
+        <item> b)  Find the error probability when this threshold is used.
+        </item>
+      </list> 
+
+    </section>
+
+    <section id="sec2">
+      <title>Problem 2</title>
+
+      <para id="sec2para1">
+        Consider a PAM system where symbols
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>,
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>,
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>3</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>,
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>a</m:mi>
+              <m:mn>4</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        are transmitted where
+        <m:math>
+          <m:apply>
+            <m:in/>
+              <m:ci>
+                <m:msub>
+                  <m:mi>a</m:mi>
+                  <m:mn>n</m:mn>
+                </m:msub>
+              </m:ci>
+              <m:set>
+                <m:apply>
+                  <m:times/>
+                    <m:cn>2</m:cn>
+                    <m:ci>A</m:ci>
+                </m:apply>
+                <m:ci>A</m:ci>
+                <m:apply>
+                  <m:minus/>
+                    <m:ci>A</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:minus/>
+                    <m:apply>
+                      <m:times/>
+                        <m:cn>2</m:cn>
+                        <m:ci>A</m:ci>
+                    </m:apply>
+                </m:apply>
+              </m:set>
+          </m:apply>
+        </m:math>.
+        The transmitted signal is
+        <equation id="sec2eq1">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+                <m:ci>
+                  <m:msub>
+                    <m:mi>X</m:mi>
+                    <m:mi>t</m:mi>
+                  </m:msub>
+                </m:ci>
+                <m:apply>
+                  <m:sum/>
+                    <m:bvar><m:ci>n</m:ci></m:bvar>
+                    <m:lowlimit>
+                      <m:cn>1</m:cn>
+                    </m:lowlimit>
+                    <m:uplimit>
+                      <m:cn>4</m:cn>
+                    </m:uplimit>
+                    <m:apply>
+                      <m:times/>
+                        <m:ci>
+                          <m:msub>
+                            <m:mi>a</m:mi>
+                            <m:mi>n</m:mi>
+                          </m:msub>
+                        </m:ci>
+                        <m:apply>
+                          <m:ci type="fn">s</m:ci>
+                          <m:apply>
+                            <m:minus/>
+                              <m:ci>t</m:ci>
+                              <m:apply>
+                                <m:times/>
+                                  <m:ci>n</m:ci>
+                                  <m:ci>T</m:ci>
+                              </m:apply>
+                          </m:apply>
+                        </m:apply>
+                    </m:apply>
+                </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        where
+        <m:math> 
+          <m:apply>
+            <m:ci type="fn">s</m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        is a rectangular pulse of duration
+        <m:math><m:ci>T</m:ci></m:math> and height of 1. Assume that
+        we have a channel with impulse response <m:math>
+          <m:apply>
+            <m:ci type="fn">g</m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        which is a rectangular pulse of duration
+        <m:math><m:ci>T</m:ci></m:math> and height 1, with white
+        Gaussian noise with
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>S</m:mi>
+                    <m:mi>N</m:mi>
+                  </m:msub>
+                </m:ci>
+                <m:ci>f</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:divide/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>N</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:ci>
+                  <m:cn>2</m:cn>
+              </m:apply>
+          </m:apply>
+        </m:math>
+        for all
+        <m:math>
+          <m:ci>f</m:ci>
+        </m:math>.
+      </para>
+
+      <list id="sec2list">
+        <item> a)  Draw a typical sample path (realization) of
+          <m:math>
+            <m:ci>
+              <m:msub>
+                <m:mi>X</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>
+          and of the received signal
+          <m:math>
+            <m:ci>
+              <m:msub>
+                <m:mi>r</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>
+          (do not forget to add a bit of noise!)
+        </item>
+        <item> b)  Assume that the receiver knows
+          <m:math>
+            <m:apply>
+              <m:ci type="fn">g</m:ci>
+              <m:ci>t</m:ci>
+            </m:apply>
+          </m:math>.
+          Design a matched filter for this transmission system.
+        </item>
+        <item> c)  Draw a typical sample path of
+          <m:math>
+            <m:ci>
+              <m:msub>
+                <m:mi>Y</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>,
+          the output of the matched filter (do not forget to add a bit of
+          noise!)
+        </item>
+        <item> d)  Find an expression (or draw)
+          <m:math>
+            <m:apply>
+              <m:ci type="fn">u</m:ci>
+              <m:apply>
+                <m:times/>
+                  <m:ci>n</m:ci>
+                  <m:ci>T</m:ci>
+              </m:apply>
+            </m:apply>
+          </m:math> where
+          <m:math>
+            <m:apply>
+              <m:eq/>
+                <m:apply>
+                  <m:ci type="fn">u</m:ci>
+                  <m:ci>t</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#convolve"/>
+                  <m:ci type="fn">s</m:ci>
+                  <m:ci type="fn">g</m:ci>
+                  <m:apply>
+                    <m:ci type="fn">
+                      <m:msup>
+                        <m:mi>h</m:mi>
+                        <m:mi>opt</m:mi>
+                      </m:msup>
+                    </m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                </m:apply>
+            </m:apply>
+          </m:math>.
+        </item>
+      </list>
+
+    </section>
+
+    <section id="sec3">
+      <title>Problem 3</title>
+      <para id="sec3para">
+        Proakis and Salehi, problem 7.35
+      </para>
+
+    </section>
+
+    <section id="sec4">
+      <title>Problem 4</title>
+      <para id="sec4para">
+        Proakis and Salehi, problem 7.39
+      </para>
+
+    </section>
+
+  </content>
+  
+</document>

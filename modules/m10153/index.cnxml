@@ -1,0 +1,875 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Performance Analysis of Binary Antipodal Signals with Matched Filters</title>
+
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>2865756b-a589-4a82-b551-89415fbbca2e</md:uuid>
+</metadata>
+
+  <content>
+    <section id="s1">
+      <title>Matched Filter receiver</title>
+
+      <para id="para1">
+        Recall
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>r</m:mi>
+		<m:mi>t</m:mi>
+	      </m:msub>
+	    </m:ci>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mi>m</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>N</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>
+        where
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>m</m:ci>
+	    <m:cn>1</m:cn>
+          </m:apply>
+        </m:math>
+        or
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>m</m:ci>
+	    <m:cn>2</m:cn>
+          </m:apply>
+        </m:math>
+        and
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:minus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	    </m:apply>
+          </m:apply>
+        </m:math> (see <link target-id="fig1"/>).
+      </para>
+
+      <figure id="fig1">
+        <media id="idm556784" alt=""><image src="../../media/Figure4-34_2.png" mime-type="image/png"/></media>
+      </figure>
+
+      <para id="para2">
+        <equation id="eq01">
+          <m:math display="block">
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>Y</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>E</m:mi>
+		    <m:mi>s</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ν</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        <equation id="eq02">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>Y</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:minus/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>E</m:mi>
+		      <m:mi>s</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ν</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        since
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:minus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	    </m:apply>
+          </m:apply>
+        </m:math>
+        then
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>ν</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is
+        <m:math>
+          <m:apply>
+	    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#normaldistribution"/>
+            <m:cn>0</m:cn>
+            <m:apply>
+              <m:times/>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>N</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>E</m:mi>
+		  <m:mi>s</m:mi>
+		</m:msub>
+	      </m:ci>
+            </m:apply>
+          </m:apply>
+        </m:math>.
+        Furthermore
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>ν</m:mi>
+		<m:mn>2</m:mn>
+	      </m:msub>
+	    </m:ci>
+	    <m:apply>
+	      <m:minus/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>ν</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+        Given
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>ν</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        then
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>ν</m:mi>
+              <m:mn>2</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is deterministic and equals
+        <m:math>
+          <m:apply>
+            <m:minus/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>ν</m:mi>
+		<m:mn>1</m:mn>
+	      </m:msub>
+	    </m:ci>
+          </m:apply>
+        </m:math>.  Then 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn"><m:msub>
+		  <m:mi>Y</m:mi>
+		  <m:mi>2</m:mi>
+		</m:msub></m:ci>
+	      <m:ci>T</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:minus/>
+	      <m:apply>
+		<m:ci type="fn"><m:msub>
+		    <m:mi>Y</m:mi>
+		    <m:mi>1</m:mi>
+		  </m:msub></m:ci>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math> if 
+	<m:math>
+	  <m:apply>
+	    <m:ci type="fn"><m:msub>
+		<m:mi>s</m:mi>
+		<m:mi>1</m:mi>
+	      </m:msub></m:ci>
+	    <m:ci>t</m:ci>
+	  </m:apply>
+	</m:math> is transmitted.
+      </para>
+
+      <para id="para3">
+        If 
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>T</m:ci>
+          </m:apply>
+        </m:math>
+        is transmitted
+
+        <equation id="eq03">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>Y</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:minus/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>E</m:mi>
+		      <m:mi>s</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ν</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        <equation id="eq04">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>Y</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>T</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:plus/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>E</m:mi>
+		    <m:mi>s</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ν</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>ν</m:mi>
+              <m:mn>1</m:mn>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is
+        <m:math>
+          <m:apply>
+	    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#normaldistribution"/>
+            <m:cn>0</m:cn>
+            <m:apply>
+              <m:times/>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>N</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>E</m:mi>
+		  <m:mi>s</m:mi>
+		</m:msub>
+	      </m:ci>
+            </m:apply>
+          </m:apply>
+        </m:math>
+        and
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>ν</m:mi>
+		<m:mn>2</m:mn>
+	      </m:msub>
+	    </m:ci>
+	    <m:apply>
+	      <m:minus/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>ν</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+      </para>
+
+      <para id="para4">
+        The receiver can be simplified to (see <link target-id="fig2"/>)
+
+	<figure id="fig2">
+	  <media id="idm6629424" alt=""><image src="../../media/Figure4-35.png" mime-type="image/png"/></media>
+	</figure>
+
+        If
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>1</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        is transmitted
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>Y</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>T</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>E</m:mi>
+		  <m:mi>s</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>ν</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+      </para>
+
+      <para id="para6">
+        If
+        <m:math>
+          <m:apply>
+            <m:ci type="fn">
+              <m:msub>
+                <m:mi>s</m:mi>
+                <m:mn>2</m:mn>
+              </m:msub>
+            </m:ci>
+            <m:ci>t</m:ci>
+          </m:apply>
+        </m:math>
+        is transmitted
+        <m:math>
+          <m:apply>
+            <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">
+		<m:msub>
+		  <m:mi>Y</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>T</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:minus/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>E</m:mi>
+		    <m:mi>s</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>ν</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+          </m:apply>
+        </m:math>.
+      </para>
+
+      <para id="para7">
+        <equation id="eq05">
+          <m:math>
+            <m:apply>
+              <m:eq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>P</m:mi>
+		  <m:mi>e</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:cn type="rational">1<m:sep/>2</m:cn>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:condition>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>s</m:mi>
+			    <m:mn>1</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:condition>
+		    <m:apply>
+		      <m:lt/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>Y</m:mi>
+			    <m:mn>1</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>T</m:ci>
+		      </m:apply>
+		      <m:cn>0</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn type="rational">1<m:sep/>2</m:cn>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:condition>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>s</m:mi>
+			    <m:mn>2</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>t</m:ci>
+		      </m:apply>
+		    </m:condition>
+		    <m:apply>
+		      <m:geq/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>Y</m:mi>
+			    <m:mn>1</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:ci>T</m:ci>
+		      </m:apply>
+		      <m:cn>0</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:cn type="rational">1<m:sep/>2</m:cn>
+		  <m:apply>
+		    <m:int/>
+		    <m:bvar>
+		      <m:ci>y</m:ci>
+		    </m:bvar>
+		    <m:lowlimit>
+		      <m:apply>
+			<m:minus/>
+			<m:infinity/>
+		      </m:apply>
+		    </m:lowlimit>
+		    <m:uplimit>
+		      <m:cn>0</m:cn>
+		    </m:uplimit>
+		    <m:apply>
+		      <m:times/>
+		      <m:apply>
+			<m:divide/>
+			<m:cn>1</m:cn>
+			<m:apply>
+			  <m:root/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:apply>
+			      <m:divide/>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>N</m:mi>
+				  <m:mn>0</m:mn>
+				</m:msub>
+			      </m:ci>
+			      <m:cn>2</m:cn>
+			    </m:apply>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>E</m:mi>
+				<m:mi>s</m:mi>
+			      </m:msub>
+			    </m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		      <m:apply>
+			<m:exp/>
+			<m:apply>
+			  <m:divide/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:apply>
+			      <m:power/>
+			      <m:apply>
+				<m:abs/>
+				<m:apply>
+				  <m:minus/>
+				  <m:ci>y</m:ci>
+				  <m:ci>
+				    <m:msub>
+				      <m:mi>E</m:mi>
+				      <m:mi>s</m:mi>
+				    </m:msub>
+				  </m:ci>
+				</m:apply>
+			      </m:apply>
+			      <m:cn>2</m:cn>
+			    </m:apply>
+			  </m:apply>
+			  <m:apply>
+			    <m:times/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>N</m:mi>
+				<m:mn>0</m:mn>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>E</m:mi>
+				<m:mn>s</m:mn>
+			      </m:msub>
+			    </m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn type="rational">1<m:sep/>2</m:cn>
+		  <m:apply>
+		    <m:int/>
+		    <m:bvar>
+		      <m:ci>y</m:ci>
+		    </m:bvar>
+		    <m:lowlimit>
+		      <m:cn>0</m:cn>
+		    </m:lowlimit>
+		    <m:uplimit>
+		      <m:infinity/>
+		    </m:uplimit>
+		    <m:apply>
+		      <m:times/>
+		      <m:apply>
+			<m:divide/>
+			<m:cn>1</m:cn>
+			<m:apply>
+			  <m:root/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>2</m:cn>
+			    <m:pi/>
+			    <m:apply>
+			      <m:divide/>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>N</m:mi>
+				  <m:mn>0</m:mn>
+				</m:msub>
+			      </m:ci>
+			      <m:cn>2</m:cn>
+			    </m:apply>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>E</m:mi>
+				<m:mi>s</m:mi>
+			      </m:msub>
+			    </m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		      <m:apply>
+			<m:exp/>
+			<m:apply>
+			  <m:divide/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:apply>
+			      <m:power/>
+			      <m:apply>
+				<m:abs/>
+				<m:apply>
+				  <m:plus/>
+				  <m:ci>y</m:ci>
+				  <m:ci>
+				    <m:msub>
+				      <m:mi>E</m:mi>
+				      <m:mi>s</m:mi>
+				    </m:msub>
+				  </m:ci>
+				</m:apply>
+			      </m:apply>
+			      <m:cn>2</m:cn>
+			    </m:apply>
+			  </m:apply>
+			  <m:apply>
+			    <m:times/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>N</m:mi>
+				<m:mn>0</m:mn>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>E</m:mi>
+				<m:mn>s</m:mn>
+			      </m:msub>
+			    </m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+
+	      <m:apply>
+		<m:ci type="fn">Q</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>E</m:mi>
+		      <m:mi>s</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:root/>
+		    <m:apply>
+		      <m:times/>
+		      <m:apply>
+			<m:divide/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>N</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:cn>2</m:cn>
+		      </m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>E</m:mi>
+			  <m:mi>s</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:ci type="fn">Q</m:ci>
+		<m:apply>
+		  <m:root/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>E</m:mi>
+			  <m:mi>s</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>N</m:mi>
+			<m:mn>0</m:mn>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+            </m:apply>
+          </m:math>
+        </equation>
+
+        This is the exact bit-error rate of a <link document="m10152">correlation receiver</link>.  For a
+	bit-error analysis for orthogonal signals using a matched
+	filter receiver, refer <link document="m10155">here</link>.
+      </para>
+
+    </section>
+
+  </content>
+</document>

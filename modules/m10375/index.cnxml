@@ -1,0 +1,386 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 3 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e550e0b8-d648-45c3-857e-d233f4e041b5</md:uuid>
+</metadata>
+
+
+
+  <content>
+    
+    <exercise id="prob1">
+      <problem id="idm6103168">
+	<para id="prob1para1">
+        Suppose that a white Gaussian noise
+        <m:math display="inline">
+          <m:ci>
+            <m:msub>
+              <m:mi>X</m:mi>
+              <m:mi>t</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is input to a linear system with transfer function given by
+        <equation id="prob1eq1">
+          <m:math display="block">
+            <m:apply>
+              <m:eq/>
+                <m:apply>
+                  <m:ci type="fn">H</m:ci>
+                  <m:ci>f</m:ci>
+                </m:apply>
+                <m:piecewise>
+                  <m:piece>
+                    <m:cn>1</m:cn>
+                    <m:apply>
+                      <m:leq/>
+                        <m:apply>
+                          <m:abs/>
+                            <m:ci>f</m:ci>
+                        </m:apply>
+                        <m:cn>2</m:cn>
+                    </m:apply>
+                  </m:piece>
+                  <m:piece>
+                    <m:cn>0</m:cn>
+                    <m:apply>
+                      <m:gt/>
+                        <m:apply>
+                          <m:abs/>
+                            <m:ci>f</m:ci>
+                        </m:apply>
+                        <m:cn>2</m:cn>
+                    </m:apply>
+                  </m:piece>
+                </m:piecewise>
+            </m:apply>
+          </m:math>
+        </equation>
+        Suppose further that the input process is zero mean and has spectral
+        height
+        <m:math display="inline">
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:divide/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>N</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:ci>
+                  <m:cn>2</m:cn>
+              </m:apply>
+              <m:cn>5</m:cn>
+          </m:apply>
+        </m:math>.
+        Let
+        <m:math display="inline">
+          <m:ci>
+            <m:msub>
+              <m:mi>Y</m:mi>
+              <m:mi>t</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        denote the resulting output process.
+      </para>
+      
+	<list id="prob1parta" list-type="enumerated">
+         <item>Find the power spectral density of
+            <m:math display="inline">
+              <m:ci>
+                <m:msub>
+                  <m:mi>Y</m:mi>
+                  <m:mi>t</m:mi>
+                </m:msub>
+              </m:ci>
+            </m:math>.
+            Find the autocorrelation of
+            <m:math display="inline">
+	      <m:ci>
+	        <m:msub>
+	          <m:mi>Y</m:mi>
+	          <m:mi>t</m:mi>
+	        </m:msub>
+	      </m:ci>
+            </m:math> (<foreign>i.e.</foreign>,
+            <m:math display="inline">
+              <m:apply>
+              <m:ci type="fn">
+                <m:msub>
+                  <m:mi>R</m:mi>
+                  <m:mi>Y</m:mi>
+                </m:msub>
+              </m:ci>
+              <m:ci>τ</m:ci>
+              </m:apply>
+            </m:math>).
+       </item>
+       
+       <item>
+         Form a discrete-time process (that is a sequence of
+            random variables) by sampling
+            <m:math display="inline">
+              <m:ci>
+                <m:msub>
+                  <m:mi>Y</m:mi>
+                  <m:mi>t</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  at time instants <m:math><m:ci>T</m:ci> </m:math> seconds
+	  apart. Find a value for <m:math><m:ci>T</m:ci> </m:math>
+	  such that these samples are uncorrelated.  Are these samples
+	  also independent?
+	</item>
+	
+	<item>
+	  What is the variance of each sample of the output process?
+	</item>
+      </list>
+	<figure id="prob1fig" orient="horizontal">
+        <media id="idp1117504" alt=""><image src="../../media/HW3Fig1.png" mime-type="image/png"/></media>
+      </figure>
+      </problem>
+    </exercise>
+    
+    <exercise id="prob2">
+      <problem id="idp856912">
+      
+      <para id="prob2para1">
+        Suppose that
+        <m:math display="inline">
+          <m:ci>
+            <m:msub>
+              <m:mi>X</m:mi>
+              <m:mi>t</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is a zero mean white Gaussian process with spectral height
+        <m:math display="inline">
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:divide/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>N</m:mi>
+                      <m:mn>0</m:mn>
+                    </m:msub>
+                  </m:ci>
+                  <m:cn>2</m:cn>
+              </m:apply>
+              <m:cn>5</m:cn>
+          </m:apply>
+        </m:math>.  Denote
+        <m:math display="inline">
+          <m:ci>
+            <m:msub>
+              <m:mi>Y</m:mi>
+              <m:mi>t</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        as the output of an integrator when the input is
+        <m:math display="inline">
+           <m:ci>
+             <m:msub>
+               <m:mi>Y</m:mi>
+               <m:mi>t</m:mi>
+             </m:msub>
+           </m:ci>
+        </m:math>.
+      </para>
+      
+      <figure id="prob2fig">
+        <media id="idp1944480" alt=""><image src="../../media/HW3Fig2.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <list id="prob2list" list-type="enumerated">
+        <item>Find the mean function of
+          <m:math display="inline">
+	    <m:ci>
+	      <m:msub>
+	        <m:mi>Y</m:mi>
+	        <m:mi>t</m:mi>
+	      </m:msub>
+	    </m:ci>
+          </m:math>. Find the autocorrelation function of
+          <m:math display="inline">
+            <m:ci>
+              <m:msub>
+                <m:mi>Y</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>,
+          <m:math display="inline">
+            <m:apply>
+              <m:ci type="fn">
+                <m:msub>
+                  <m:mi>R</m:mi>
+                  <m:mi>Y</m:mi>
+                </m:msub>
+              </m:ci>
+              <m:apply>
+                <m:plus/>
+                  <m:ci>t</m:ci>
+                  <m:ci>τ</m:ci>
+              </m:apply>
+              <m:ci>t</m:ci>
+            </m:apply>
+          </m:math>
+        </item>
+        <item>Let
+          <m:math display="inline">
+            <m:ci>
+              <m:msub>
+                <m:mi>Z</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>
+          be a sequence of random variables that have been obtained by
+          sampling
+          <m:math display="inline">
+            <m:ci>
+              <m:msub>
+                <m:mi>Y</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>
+          at every <m:math><m:ci>T</m:ci> </m:math> seconds and
+	  dumping the samples, that is
+          <equation id="prob3eq">
+            <m:math display="block">
+              <m:apply>
+                <m:eq/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>Z</m:mi>
+                      <m:mi>k</m:mi>
+                    </m:msub>
+                  </m:ci>
+                  <m:apply>
+                    <m:int/>
+                      <m:bvar><m:ci>τ</m:ci></m:bvar>
+                      <m:lowlimit>
+                        <m:apply>
+                          <m:times/>
+                            <m:apply>
+                              <m:minus/>
+                                <m:ci>k</m:ci>
+                                <m:cn>1</m:cn>
+                            </m:apply>
+                            <m:ci>T</m:ci>
+                        </m:apply>
+                      </m:lowlimit>
+                      <m:uplimit>
+                        <m:apply>
+                          <m:times/>
+                            <m:ci>k</m:ci>
+                            <m:ci>T</m:ci>
+                        </m:apply>
+                      </m:uplimit>
+                      <m:ci>
+                        <m:msub>
+                          <m:mi>X</m:mi>
+                          <m:mi>τ</m:mi>
+                        </m:msub>
+                      </m:ci>
+                  </m:apply>
+              </m:apply>
+            </m:math>
+          </equation>
+          Find the autocorrelation of the discrete-time processes
+          <m:math display="inline">
+            <m:ci>
+              <m:msub>
+                <m:mi>Z</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>'s, that is,
+          <m:math display="inline">
+            <m:apply>
+              <m:eq/>
+                <m:apply>
+                  <m:ci type="fn">
+                    <m:msub>
+                      <m:mi>R</m:mi>
+                      <m:mi>Z</m:mi>
+                    </m:msub>
+                  </m:ci>
+                  <m:apply>
+                    <m:plus/>
+                      <m:ci>k</m:ci>
+                      <m:ci>m</m:ci>
+                  </m:apply>
+                  <m:ci>k</m:ci>
+                </m:apply>
+                <m:apply>
+                  <m:ci type="fn">E</m:ci>
+                  <m:apply>
+                    <m:times/>
+                      <m:ci>
+                        <m:msub>
+                          <m:mi>Z</m:mi>
+                          <m:mi>k+m</m:mi>
+                        </m:msub>
+                      </m:ci>
+                      <m:ci>
+                        <m:msub>
+                          <m:mi>Z</m:mi>
+                          <m:mi>k</m:mi>
+                        </m:msub>
+                      </m:ci>
+                  </m:apply>
+                </m:apply>
+            </m:apply>
+          </m:math>
+        </item>
+        <item>Is
+          <m:math display="inline">
+            <m:ci>
+              <m:msub>
+                <m:mi>Z</m:mi>
+                <m:mi>k</m:mi>
+              </m:msub>
+            </m:ci>
+          </m:math>
+          a wide sense stationary process?
+        </item>
+      </list>
+      </problem>
+    </exercise>
+    
+    <exercise id="prob4">
+      <problem id="idm648896">
+      <para id="prob4para">
+        <cite><cite-title>Proakis and Salehi</cite-title></cite>, problem 3.63, parts 1, 3, and 4
+      </para>
+      </problem>
+    </exercise>
+    
+    <exercise id="prob5">
+      <problem id="idp697888">
+      <para id="prob5para">
+        <cite><cite-title>Proakis and Salehi</cite-title></cite>, problem 3.54
+      </para>
+      </problem>
+    </exercise>
+    
+    <exercise id="prob6">
+      <problem id="idm6408976">
+      <para id="prob6para">
+        <cite><cite-title>Proakis and Salehi</cite-title></cite>, problem 3.62
+      </para>
+      </problem>
+    </exercise>
+    
+  </content>				      
+  
+</document>

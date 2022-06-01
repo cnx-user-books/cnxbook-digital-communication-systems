@@ -1,0 +1,95 @@
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+  <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
+    <md:content-id>col10134</md:content-id>
+    <md:title>Digital Communication Systems</md:title>
+    <md:language>en</md:language>
+    <md:license url="http://creativecommons.org/licenses/by/1.0">Creative Commons Attribution License</md:license>
+    <md:uuid>5d9b8dcb-5cc0-44dd-a10e-aceed3a53eed</md:uuid>
+<md:slug>digital-communication-systems</md:slug>
+</metadata>
+  <col:content>
+    <col:subcollection>
+      <md:title>Chapter 1</md:title>
+      <col:content/>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 2</md:title>
+      <col:content>
+        <col:module document="m10224"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 3</md:title>
+      <col:content>
+        <col:module document="m10235"/>
+        <col:module document="m10236"/>
+        <col:module document="m10237"/>
+        <col:module document="m10238"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 4</md:title>
+      <col:content>
+        <col:module document="m10115"/>
+        <col:module document="m10116"/>
+        <col:module document="m10035"/>
+        <col:module document="m10054"/>
+        <col:module document="m10141"/>
+        <col:module document="m10091"/>
+        <col:module document="m10149"/>
+        <col:module document="m10101"/>
+        <col:module document="m10150"/>
+        <col:module document="m10151"/>
+        <col:module document="m10106"/>
+        <col:module document="m10152"/>
+        <col:module document="m10154"/>
+        <col:module document="m10153"/>
+        <col:module document="m10155"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 5</md:title>
+      <col:content>
+        <col:module document="m10056"/>
+        <col:module document="m10094"/>
+        <col:module document="m10118"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 6</md:title>
+      <col:content>
+        <col:module document="m10128"/>
+        <col:module document="m10156"/>
+        <col:module document="m10163"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Chapter 7</md:title>
+      <col:content>
+        <col:module document="m10162"/>
+        <col:module document="m10164"/>
+        <col:module document="m10175"/>
+        <col:module document="m10176"/>
+        <col:module document="m10173"/>
+        <col:module document="m10178"/>
+        <col:module document="m10179"/>
+        <col:module document="m10180"/>
+        <col:module document="m10174"/>
+        <col:module document="m10181"/>
+      </col:content>
+    </col:subcollection>
+    <col:subcollection>
+      <md:title>Homework</md:title>
+      <col:content/>
+    </col:subcollection>
+    <col:module document="m10370"/>
+    <col:module document="m10374"/>
+    <col:module document="m10450"/>
+    <col:module document="m10375"/>
+    <col:module document="m10449"/>
+    <col:module document="m10451"/>
+    <col:module document="m10452"/>
+    <col:module document="m10453"/>
+    <col:module document="m10455"/>
+  </col:content>
+</col:collection>

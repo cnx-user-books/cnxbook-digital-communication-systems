@@ -1,0 +1,570 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 1 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>c482cf17-117a-4295-803c-f8ce03cef8d9</md:uuid>
+</metadata>
+
+  <content>
+
+    <para id="intro">
+      Elec 430 homework set 1. Rice University Department of Electrical
+      and Computer Engineering.
+    </para>
+
+    <exercise id="ex1">
+      <problem id="idm10916880">
+	<para id="prob1para1">
+	  The current <m:math><m:ci>I</m:ci></m:math> in a
+	  semiconductor diode is related to the voltage
+	  <m:math><m:ci>V</m:ci></m:math> by the relation
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>I</m:ci>
+	      <m:apply>
+		<m:minus/>
+                <m:apply>
+                  <m:exp/>
+		  <m:ci>V</m:ci>
+                </m:apply>
+                <m:cn>1</m:cn>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>.  If <m:math><m:ci>V</m:ci></m:math> is a random
+	  variable with density function
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:ci type="function">
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:mi>V</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>x</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+                <m:apply>
+                  <m:divide/>
+		  <m:cn>1</m:cn>
+		  <m:cn>2</m:cn>
+                </m:apply>
+                <m:apply>
+                  <m:exp/>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:abs/>
+		      <m:ci>x</m:ci>
+		    </m:apply>
+		  </m:apply>
+                </m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	  for
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:lt/>
+	      <m:apply>
+		<m:minus/>
+                <m:infinity/>
+	      </m:apply>
+	      <m:ci>x</m:ci>
+	      <m:infinity/>
+	    </m:apply>
+	  </m:math>, find
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">f</m:csymbol>
+	      <m:bvar>
+		<m:ci>I</m:ci>
+	      </m:bvar>
+	      <m:ci>y</m:ci>
+	    </m:apply>
+	  </m:math>; the density function of
+	  <m:math><m:ci>I</m:ci></m:math>.
+	</para>
+      </problem>
+    </exercise>
+  
+
+    <exercise id="ex2">
+      <problem id="idm50160">
+	<section id="s2.1">
+	  <para id="prob2para1">
+	    Show that if
+	    <m:math display="inline">
+	      <m:apply>
+		<m:eq/>
+                <m:apply>
+                  <m:times/>
+                    <m:ci>A</m:ci>
+                    <m:ci>B</m:ci>
+                </m:apply>
+                <m:ci>{}</m:ci>
+	      </m:apply>
+	    </m:math>
+	    then
+	    <m:math display="inline">
+	      <m:apply>
+              <m:leq/>
+                <m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+                  <m:ci>A</m:ci>
+                </m:apply>
+                <m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+                  <m:ci>
+                    <m:msup>
+                      <m:mi>B</m:mi>
+                      <m:mi>c</m:mi>
+                    </m:msup>
+                  </m:ci>
+                </m:apply>
+	      </m:apply>
+	    </m:math>
+	  </para>
+	</section>
+
+	<section id="s2.2">
+	  <para id="prob2para2">
+	    Show that for any <m:math><m:ci>A</m:ci></m:math>,
+	    <m:math><m:ci>B</m:ci></m:math>,
+	    <m:math><m:ci>C</m:ci></m:math> we have
+	    <m:math display="inline">
+	      <m:apply>
+		<m:eq/>
+                <m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+                  <m:apply>
+                    <m:union/>
+		    <m:ci>A</m:ci>
+		    <m:ci>B</m:ci>
+		    <m:ci>C</m:ci>
+                  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:plus/>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:ci>A</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:ci>B</m:ci>
+		  </m:apply>                  
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:minus/>
+			<m:apply>
+			  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+			  <m:ci>C</m:ci>
+			</m:apply>
+			<m:apply>
+			  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+			  <m:apply>
+			    <m:intersect/>
+			    <m:ci>A</m:ci>
+			    <m:ci>B</m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		      <m:apply>
+			<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+			<m:apply>
+			  <m:intersect/>
+			  <m:ci>A</m:ci>
+			  <m:ci>C</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		      <m:apply>
+			<m:intersect/>
+			<m:ci>B</m:ci>
+			<m:ci>C</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:apply>
+		      <m:intersect/>
+		      <m:ci>A</m:ci>
+		      <m:ci>B</m:ci>
+		      <m:ci>C</m:ci>
+		    </m:apply>
+		  </m:apply>
+                </m:apply>
+	      </m:apply>    
+	    </m:math>
+	  </para>
+	</section>
+
+	<section id="s2.3">
+	  <para id="prob2para3">
+	    Show that if <m:math><m:ci>A</m:ci></m:math> and
+	    <m:math><m:ci>B</m:ci></m:math> are independent the
+	    <m:math display="inline">
+	      <m:apply>
+		<m:eq/>
+                <m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+                  <m:apply>
+                    <m:intersect/>
+		    <m:ci>A</m:ci>
+		    <m:ci>
+		      <m:msup>
+			<m:mi>B</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msup>
+		    </m:ci>
+                  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:ci>A</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		    <m:ci>
+		      <m:msup>
+			<m:mi>B</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msup>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>         
+	    which means <m:math display="inline"><m:ci>A</m:ci></m:math> and 
+	    <m:math display="inline"><m:ci>
+		<m:msup><m:mi>B</m:mi><m:mi>c</m:mi></m:msup>
+	      </m:ci></m:math> are also independent.
+	  </para>
+	</section>
+      </problem>
+    </exercise>
+   
+    <exercise id="ex3">
+      <problem id="idm9123120">
+     
+	<para id="prob3para1">
+	  Suppose <m:math><m:ci>X</m:ci></m:math> is a discrete random
+	  variable taking values
+	  <m:math display="inline">
+	    <m:set>
+	      <m:cn>0</m:cn>
+	      <m:cn>1</m:cn>
+	      <m:cn>2</m:cn>
+	      <m:ci>…</m:ci>
+	      <m:ci>n</m:ci>
+	    </m:set>
+	  </m:math>
+	  with the following probability mass function
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">p</m:csymbol>
+		<m:bvar>
+		  <m:ci>X</m:ci>
+		</m:bvar>
+		<m:ci>k</m:ci>
+	      </m:apply>
+	      <m:piecewise>
+		<m:piece>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:apply>
+			<m:factorial/>
+			<m:ci>n</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:times/>
+			<m:apply>
+			  <m:factorial/>
+			  <m:ci>k</m:ci>
+			</m:apply>
+			<m:apply>
+			  <m:factorial/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:ci>n</m:ci>
+			    <m:ci>k</m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:power/>
+		      <m:ci>θ</m:ci>
+		      <m:ci>k</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:power/>
+		      <m:apply>
+			<m:minus/>
+			<m:cn>1</m:cn>
+			<m:ci>θ</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:minus/>
+			<m:ci>n</m:ci>
+			<m:ci>k</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>k</m:ci>
+		    <m:set>
+		      <m:cn>0</m:cn>
+		      <m:cn>1</m:cn>
+		      <m:cn>2</m:cn>
+		      <m:ci>…</m:ci>
+		      <m:ci>n</m:ci>
+		    </m:set>
+		  </m:apply>                 
+		</m:piece>
+		<m:otherwise>
+		  <m:cn>0</m:cn>
+		</m:otherwise>
+	      </m:piecewise>
+	    </m:apply>
+	  </m:math>
+	  with parameter
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:in/>
+	      <m:ci>θ</m:ci>
+	      <m:interval>
+		<m:cn>0</m:cn>
+		<m:cn>1</m:cn>
+	      </m:interval>
+	    </m:apply>
+	  </m:math>
+	</para>
+
+	<section id="s3.1">
+	  <para id="prob3para2">
+	    Find the characteristic function of
+	    <m:math><m:ci>X</m:ci></m:math>.
+	  </para>
+	</section>
+
+	<section id="s3.2">
+	  <para id="prob3para3">
+	    Find
+	    <m:math display="inline">
+	      <m:apply>
+		<m:mean/>
+		<m:ci>X</m:ci>
+	      </m:apply>
+	    </m:math>
+	    and
+	    <m:math display="inline">
+	      <m:apply>
+		<m:ci>
+		  <m:msubsup>
+		    <m:mi>σ</m:mi>
+		    <m:mi>X</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msubsup>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </para>
+	</section>
+	<note type="Hint" id="idm1062768"><label>Hint</label>See problems 3.14 and 3.15 in Proakis and Salehi</note>
+      </problem>
+    </exercise>
+   
+    <exercise id="ex4">
+      <problem id="idm9085824">
+	<para id="prob4para1">
+	  Consider outcomes of a fair dice
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>Ω</m:ci>
+	      <m:set>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>3</m:mn>
+		  </m:msub>
+		</m:ci>
+               <m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>4</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>5</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>ω</m:mi>
+		    <m:mn>6</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:set>
+	    </m:apply>
+	  </m:math>.
+	  Define events
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>A</m:ci>
+	      <m:set>
+		<m:bvar>
+		  <m:ci>ω</m:ci>
+		</m:bvar>
+		<m:condition>
+		  <m:ci>
+		    <m:mtext>an even number appears</m:mtext>
+		  </m:ci>
+		</m:condition>
+		<m:ci>ω</m:ci>
+	      </m:set>
+	    </m:apply>
+	  </m:math>
+	  and
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>B</m:ci>
+	      <m:set>
+		<m:bvar>
+		  <m:ci>ω</m:ci>
+		</m:bvar>
+		<m:condition>
+		  <m:ci>
+		    <m:mtext>a number less than 5 appears</m:mtext>
+		  </m:ci>
+		</m:condition>
+		<m:ci>ω</m:ci>
+	      </m:set>
+	    </m:apply>
+	  </m:math>.  Are these events disjoint? Are they independent?
+	  (Show your work!)
+	</para>
+      </problem>
+    </exercise>
+   
+    <exercise id="ex5">
+      <problem id="idm2354336">
+	<para id="prob5para1">
+	  This is problem 3.5 in Proakis and Salehi.
+	</para>
+	<para id="prob5para2">
+	  An information source produces 0 and 1 with probabilities
+	  0.3 and 0.7, respectively. The output of the source is
+	  transmitted via a channel that has a probability of error
+	  (turning a 1 into a 0 or a 0 into a 1) equal to 0.2.
+	</para>
+	<section id="s5.1">
+	  <para id="prob5para3">
+	    What is the probability that at the output a 1 is observed?
+	  </para>
+	</section>
+	<section id="s5.2">
+	  <para id="prob5para4">
+	    What is the probability that a 1 was the output of the source 
+           if at the output of the channel a 1 is observed?
+	  </para>
+	</section>
+      </problem>
+    </exercise>
+   
+    <exercise id="ex6">
+      <problem id="idm14816">
+	<para id="prob6para1">
+	  Suppose <m:math><m:ci>X</m:ci></m:math> and
+	  <m:math><m:ci>Y</m:ci></m:math> are each Gaussian random
+	  variables with means
+	  <m:math display="inline">
+	    <m:ci>
+	      <m:msub>
+		<m:mi>μ</m:mi>
+		<m:mi>X</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and
+	  <m:math display="inline">
+	    <m:ci>
+	      <m:msub>
+		<m:mi>μ</m:mi>
+		<m:mi>Y</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and variances
+	  <m:math display="inline">
+	    <m:ci>
+	      <m:msubsup>
+		<m:mi>σ</m:mi>
+		<m:mi>X</m:mi>
+		<m:mn>2</m:mn>
+	      </m:msubsup>
+	    </m:ci>
+	  </m:math>
+	  and
+	  <m:math display="inline">
+	    <m:ci>
+	      <m:msubsup>
+		<m:mi>σ</m:mi>
+		<m:mi>Y</m:mi>
+		<m:mn>2</m:mn>
+	      </m:msubsup>
+	    </m:ci>
+	  </m:math>.
+	  Assume that they are also independent.  Show that
+	  <m:math display="inline">
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>Z</m:ci>
+	      <m:apply>
+		<m:plus/>
+		<m:ci>X</m:ci>
+		<m:ci>Y</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	  is also Gaussian.  Find the mean and variance of
+	  <m:math><m:ci>Z</m:ci></m:math>.
+	</para>
+      </problem>
+    </exercise>
+  
+  </content>
+</document>

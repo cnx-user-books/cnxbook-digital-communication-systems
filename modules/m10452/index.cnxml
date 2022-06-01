@@ -1,0 +1,617 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 7 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>39b7259f-d7f0-4bec-919e-e130fea07ea9</md:uuid>
+</metadata>
+
+  <content>
+
+    <exercise id="sec1">
+      <problem id="idm510800">
+
+      <para id="sec1para1">
+        Consider an On-Off Keying system where
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:times/>
+                  <m:ci>A</m:ci>
+                  <m:apply>
+                    <m:cos/>
+                      <m:apply>
+                        <m:plus/>
+                          <m:apply>
+                            <m:times/>
+                              <m:cn>2</m:cn>
+                              <m:pi/>
+                              <m:ci>
+                                <m:msub>
+                                  <m:mi>f</m:mi>
+                                  <m:mi>c</m:mi>
+                                </m:msub>
+                              </m:ci>
+                              <m:ci>t</m:ci>
+                          </m:apply>
+                          <m:ci>θ</m:ci>
+                      </m:apply>
+                  </m:apply>
+              </m:apply>
+          </m:apply>
+        </m:math>
+        for
+        <m:math>
+          <m:apply>
+            <m:leq/>
+              <m:cn>0</m:cn>
+              <m:ci>t</m:ci>
+              <m:ci>T</m:ci>
+          </m:apply>
+        </m:math>
+        and
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:cn>0</m:cn>
+          </m:apply>
+        </m:math>
+        for
+        <m:math>
+          <m:apply>
+            <m:leq/>
+              <m:cn>0</m:cn>
+              <m:ci>t</m:ci>
+              <m:ci>T</m:ci>
+          </m:apply>
+        </m:math>.
+        The channel is ideal AWGN with zero mean and spectral height
+        <m:math>
+          <m:apply>
+            <m:divide/>
+              <m:ci>
+                <m:msub>
+                  <m:mi>N</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:ci>
+              <m:cn>2</m:cn>
+          </m:apply>
+        </m:math>.
+        <list id="list1" list-type="enumerated">
+          <item>Assume <m:math><m:ci>θ</m:ci></m:math> is known at
+            the receiver. What is the average probability of bit-error using an
+            optimum receiver?
+          </item>
+          <item>Assume that we estimate the receiver phase to be
+            <m:math>
+              <m:ci>
+                <m:mover>
+                  <m:mi>θ</m:mi>
+                  <m:mo>^</m:mo>
+                </m:mover>
+              </m:ci>
+            </m:math> 
+            and that
+            <m:math>
+              <m:apply>
+                <m:neq/>
+                  <m:ci>
+                    <m:mover>
+                      <m:mi>θ</m:mi>
+                      <m:mo>^</m:mo>
+                    </m:mover>
+                  </m:ci>
+                  <m:ci>θ</m:ci>
+              </m:apply>
+            </m:math>.
+            Analyze the performance of the matched filter with the wrong phase,
+            that is, examine
+            <m:math>
+              <m:ci>
+                <m:mover>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>e</m:mi>
+                  </m:msub>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+              </m:ci>
+            </m:math>
+            as a function of the phase error.
+          </item>
+          <item>When does noncoherent become preferable? (You can find an
+            expression for the 
+            <m:math>
+              <m:ci>
+                <m:mover>
+                  <m:msub>
+                    <m:mi>P</m:mi>
+                    <m:mi>e</m:mi>
+                  </m:msub>
+                  <m:mo>¯</m:mo>
+                </m:mover>
+              </m:ci>
+            </m:math>
+            of noncoherent receivers for OOK in your textbook.) That is, how
+            big should the phase error be before you would switch to 
+            noncoherent?
+          </item>
+        </list>
+
+      </para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec2">
+      <problem id="idm8096368">
+
+      <para id="sec2para">
+        <cite><cite-title>Proakis and Salehi</cite-title></cite>, Problems 9.4 and 9.14
+      </para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec3">
+      <problem id="idm8510064">
+
+      <para id="sec3para">
+        A <emphasis>coherent</emphasis> phase-shift keyed system operating over
+        an AWGN channel with two sided power spectral density
+        <m:math>
+          <m:apply>
+            <m:divide/>
+              <m:ci>
+                <m:msub>
+                  <m:mi>N</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:ci>
+              <m:cn>2</m:cn>
+          </m:apply>
+        </m:math>
+        uses
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:times/>
+                  <m:ci>A</m:ci>
+                  <m:apply>
+                    <m:ci type="fn">
+                      <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mi>T</m:mi>
+                      </m:msub>
+                    </m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:cos/>
+                      <m:apply>
+                        <m:plus/>
+                          <m:apply>
+                            <m:times/>
+                              <m:ci>
+                                <m:msub>
+                                  <m:mi>ω</m:mi>
+                                  <m:mi>c</m:mi>
+                                </m:msub>
+                              </m:ci>
+                              <m:ci>t</m:ci>
+                          </m:apply>
+                          <m:ci>
+                            <m:msub>
+                              <m:mi>θ</m:mi>
+                              <m:mn>0</m:mn>
+                            </m:msub>
+                          </m:ci>
+                      </m:apply>
+                  </m:apply>
+              </m:apply>
+          </m:apply>
+        </m:math>
+        and
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:times/>
+                  <m:ci>A</m:ci>
+                  <m:apply>
+                    <m:ci type="fn">
+                      <m:msub>
+                        <m:mi>p</m:mi>
+                        <m:mi>T</m:mi>
+                      </m:msub>
+                    </m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:cos/>
+                      <m:apply>
+                        <m:plus/>
+                          <m:apply>
+                            <m:times/>
+                              <m:ci>
+                                <m:msub>
+                                  <m:mi>ω</m:mi>
+                                  <m:mi>c</m:mi>
+                                </m:msub>
+                              </m:ci>
+                              <m:ci>t</m:ci>
+                          </m:apply>
+                          <m:ci>
+                            <m:msub>
+                              <m:mi>θ</m:mi>
+                              <m:mn>1</m:mn>
+                            </m:msub>
+                          </m:ci>
+                      </m:apply>
+                  </m:apply>
+              </m:apply>
+          </m:apply>
+        </m:math>
+        where
+        <m:math>
+          <m:apply>
+            <m:forall/>
+              <m:bvar><m:ci>i</m:ci></m:bvar>
+               <m:condition>
+                 <m:apply>
+                  <m:in/>
+                    <m:ci>i</m:ci>
+                    <m:set>
+                      <m:cn>0</m:cn>
+                      <m:cn>1</m:cn>
+                    </m:set>
+                 </m:apply>
+               </m:condition>
+          <m:apply>
+            <m:leq/>
+              <m:apply>
+                <m:abs/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>θ</m:mi>
+                      <m:mi>i</m:mi>
+                    </m:msub>
+                  </m:ci>
+              </m:apply>
+              <m:apply>
+                <m:divide/>
+                  <m:pi/>
+                  <m:cn>3</m:cn>
+              </m:apply>
+          </m:apply>
+          </m:apply>
+        </m:math>, are constants and that
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:apply>
+                <m:times/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>c</m:mi>
+                    </m:msub>
+                  </m:ci>
+                  <m:ci>T</m:ci>
+              </m:apply>
+              <m:ci>integer</m:ci>
+          </m:apply>
+        </m:math>
+        with
+        <m:math>
+          <m:apply>
+            <m:eq/>
+              <m:ci>
+                <m:msub>
+                  <m:mi>ω</m:mi>
+                  <m:mi>c</m:mi>
+                </m:msub>
+              </m:ci>
+              <m:apply>
+                <m:times/>
+                  <m:cn>2</m:cn>
+                  <m:pi/>
+                  <m:ci>
+                    <m:msub>
+                      <m:mi>f</m:mi>
+                      <m:mi>c</m:mi>
+                    </m:msub>
+                  </m:ci>
+              </m:apply>
+          </m:apply>
+        </m:math>.
+        <list id="list2" list-type="enumerated">
+          <item>Suppose
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            and
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            are <emphasis>known</emphasis> constants and that the optimum
+            receiver uses filters matched to
+            <m:math>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+            </m:math>
+            and
+            <m:math>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>s</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+            </m:math>.
+            What are the values of
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math> and
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math>?
+          </item>
+          <item>Suppose
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            and
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            are <emphasis>unknown</emphasis> constants and that the
+            receiver filters are matched to
+            <m:math>
+              <m:apply>
+                <m:eq/>
+                  <m:apply>
+                    <m:ci type="fn">
+                      <m:msub>
+                        <m:mover>
+                          <m:mi>s</m:mi>
+                          <m:mo>^</m:mo>
+                         </m:mover>
+                        <m:mn>0</m:mn>
+                      </m:msub>
+                    </m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                      <m:ci>A</m:ci>
+                      <m:apply>
+                        <m:ci type="fn">
+                          <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mi>T</m:mi>
+                          </m:msub>
+                        </m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:cos/>
+                          <m:apply>
+                            <m:times/>
+                              <m:ci>
+                                <m:msub>
+                                  <m:mi>ω</m:mi>
+                                  <m:mi>c</m:mi>
+                                </m:msub>
+                              </m:ci>
+                              <m:ci>t</m:ci>
+                          </m:apply>
+                      </m:apply>
+                  </m:apply>
+              </m:apply>
+            </m:math>
+            and
+            <m:math>
+              <m:apply>
+                <m:eq/>
+                  <m:apply>
+                    <m:ci type="fn">
+                      <m:msub>
+                        <m:mover>
+                          <m:mi>s</m:mi>
+                          <m:mo>^</m:mo>
+                         </m:mover>
+                        <m:mn>1</m:mn>
+                      </m:msub>
+                    </m:ci>
+                    <m:ci>t</m:ci>
+                  </m:apply>
+                  <m:apply>
+                    <m:times/>
+                      <m:ci>A</m:ci>
+                      <m:apply>
+                        <m:ci type="fn">
+                          <m:msub>
+                            <m:mi>p</m:mi>
+                            <m:mi>T</m:mi>
+                          </m:msub>
+                        </m:ci>
+                        <m:ci>t</m:ci>
+                      </m:apply>
+                      <m:apply>
+                        <m:cos/>
+                          <m:apply>
+                            <m:plus/>
+                              <m:apply>
+                                <m:times/>
+                                  <m:ci>
+                                    <m:msub>
+                                      <m:mi>ω</m:mi>
+                                      <m:mi>c</m:mi>
+                                    </m:msub>
+                                  </m:ci>
+                                  <m:ci>t</m:ci>
+                              </m:apply>
+                              <m:pi/>
+                          </m:apply>
+                      </m:apply>
+                  </m:apply>
+              </m:apply>
+            </m:math> 
+            and the threshold is zero.
+            <note type="Hint" id="idm1241840"><label>Hint</label>Use a correlation receiver structure.</note>
+            What are
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math> and
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math> now? What are the minimum values of
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>0</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math> and
+            <m:math> 
+              <m:ci>
+                <m:msub>
+                  <m:mi>P</m:mi>
+                  <m:mrow>
+                    <m:mi>e</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:mrow>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            (as a function of
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>0</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>
+            and
+            <m:math>
+              <m:ci>
+                <m:msub>
+                  <m:mi>θ</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:ci>
+            </m:math>)?
+          </item>
+
+        </list>
+ 
+      </para>
+      </problem>
+    </exercise>
+
+  </content>
+  
+</document>

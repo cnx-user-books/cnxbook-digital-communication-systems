@@ -1,0 +1,381 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 2 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b917f7d2-003b-44d1-9de7-68d6af805950</md:uuid>
+</metadata>
+
+  <content>
+
+    <para id="intro">
+      Elec 430 homework set 2. Rice University Department of
+      Electrical and Computer Engineering.
+    </para>
+
+    <section id="prob1">
+      <title>Problem 1</title>
+      
+      <para id="prob1para1">
+	Suppose A and B are two Gaussian random variables each zero mean
+	with 
+	<m:math display="inline">
+	  <m:apply>
+	    <m:lt/>
+            <m:apply>
+              <m:mean/>
+	      <m:apply>
+		<m:power/>
+		<m:ci>A</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+            </m:apply>
+            <m:infinity/>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math display="inline">
+	  <m:apply>
+	    <m:lt/>
+            <m:apply>
+              <m:mean/>
+	      <m:apply>
+		<m:power/>
+		<m:ci>B</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+            </m:apply>
+            <m:infinity/>
+	  </m:apply>
+	</m:math>.
+	The correlation between them is denoted by
+	<m:math display="inline">
+	  <m:apply>
+	    <m:mean/>
+            <m:apply>
+              <m:times/>
+	      <m:ci>A</m:ci>
+	      <m:ci>B</m:ci>
+            </m:apply>
+	  </m:apply>
+	</m:math>.
+	Define the random process
+	<m:math display="inline">
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>
+              <m:msub>
+                <m:mi>X</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+            <m:apply>
+              <m:plus/>
+	      <m:ci>A</m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:ci>B</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math display="inline">
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>
+              <m:msub>
+                <m:mi>Y</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+            <m:apply>
+              <m:plus/>
+	      <m:ci>B</m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:ci>A</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+            </m:apply>
+	  </m:apply>
+	</m:math>.
+	<list id="prob1list">
+	  <item>a) Find the mean, autocorrelation, and crosscorrelation
+	    functions of
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>Y</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>.
+	  </item>
+	  <item>b) Find the 1st order density of
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>,
+	    <m:math display="inline">
+	      <m:apply>
+		<m:ci type="function">
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:msub>
+		      <m:mi>X</m:mi>
+		      <m:mi>t</m:mi>
+		    </m:msub>
+		  </m:msub>
+		</m:ci>
+		<m:ci>x</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	  <item>c) Find the conditional density of 
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:msub>
+		    <m:mi>t</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    given
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:msub>
+		    <m:mi>t</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:msub>
+	      </m:ci>
+	    </m:math>,
+	    <m:math display="inline">
+	      <m:apply>
+		<m:ci type="function">
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:mrow>
+		      <m:msub>
+			<m:mi>X</m:mi>
+			<m:msub>
+			  <m:mi>t</m:mi>
+			  <m:mn>2</m:mn>
+			</m:msub>
+		      </m:msub>
+		      <m:mo>|</m:mo>
+		      <m:msub>
+			<m:mi>X</m:mi>
+			<m:msub>
+			  <m:mi>t</m:mi>
+			  <m:mn>1</m:mn>
+			</m:msub>
+		      </m:msub>
+		    </m:mrow>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:mrow>
+		    <m:msub>
+		      <m:mi>x</m:mi>
+		      <m:mn>2</m:mn>
+		    </m:msub>
+		    <m:mo>|</m:mo>
+		    <m:msub>
+		      <m:mi>x</m:mi>
+		      <m:mn>1</m:mn>
+		    </m:msub>
+		  </m:mrow>
+		</m:ci>
+	      </m:apply>
+	    </m:math>.
+	    Assume
+	    <m:math display="inline">
+	      <m:apply>
+		<m:gt/>
+                <m:ci>
+                  <m:msub>
+                    <m:mi>t</m:mi>
+                    <m:mn>2</m:mn>
+                  </m:msub>
+                </m:ci>
+                <m:ci>
+                  <m:msub>
+                    <m:mi>t</m:mi>
+                    <m:mn>1</m:mn>
+                  </m:msub>
+                </m:ci>
+	      </m:apply>
+	    </m:math>
+	    <note type="Hint" id="idp7642464"><label>Hint</label>see Proakis and Salehi problem
+	      3.28</note>
+	  </item>
+	  <item>d) Is
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    wide sense stationary?
+	  </item>
+	</list>
+      </para>
+    </section>
+    
+    <section id="prob2">
+      <title>Problem 2</title>
+      
+      <para id="prob2para1">
+	Show that if
+	<m:math display="inline">
+	  <m:ci>
+	    <m:msub>
+	      <m:mi>X</m:mi>
+	      <m:mi>t</m:mi>
+	    </m:msub>
+	  </m:ci>
+	</m:math>
+	is second-order stationary, then it is also first-order stationary.
+      </para>
+      
+    </section>
+    
+    <section id="prob3">
+      <title>Problem 3</title>
+      
+      <para id="prob3para1">
+	Let a stochastic process
+	<m:math display="inline">
+	  <m:ci>
+	    <m:msub>
+	      <m:mi>X</m:mi>
+	      <m:mi>t</m:mi>
+	    </m:msub>
+	  </m:ci>
+	</m:math>
+	be defined by 
+	<m:math display="inline">
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>
+              <m:msub>
+                <m:mi>X</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+            <m:apply>
+              <m:cos/>
+	      <m:apply>
+		<m:plus/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>Ω</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+		<m:ci>Θ</m:ci>
+	      </m:apply>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+	where <m:math><m:ci>Ω</m:ci></m:math> and
+	<m:math><m:ci>Θ</m:ci></m:math> are statistically
+	independent random variables.
+	<m:math><m:ci>Θ</m:ci></m:math> is uniformaly
+	distributed over
+	<m:math display="inline">
+	  <m:interval>
+	    <m:apply>
+	      <m:minus/>
+              <m:pi/>
+	    </m:apply>
+	    <m:pi/>
+	  </m:interval>
+	</m:math>
+	and <m:math><m:ci>Ω</m:ci></m:math> has an unknown density
+	<m:math display="inline">
+	  <m:apply>
+	    <m:ci type="function">
+	      <m:msub>
+		<m:mi>f</m:mi>
+		<m:mi>Ω</m:mi>
+	      </m:msub>
+	    </m:ci>
+	    <m:ci>ω</m:ci>
+	  </m:apply>
+	</m:math>.
+	<list id="prob3list">
+	  <item>a) Compute the expected value of
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>.
+	  </item>
+	  <item>b) Find an expression for the correlation function of
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>.
+	  </item>
+	  <item>c) Is
+	    <m:math display="inline">
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    wide sense stationary? Show your reasoning.
+	  </item>
+	  <item>d) Find the first-order density function
+	    <m:math display="inline">
+	      <m:apply>
+		<m:ci type="function">
+		  <m:msub>
+		    <m:mi>f</m:mi>
+		    <m:msub>
+		      <m:mi>X</m:mi>
+		      <m:mi>t</m:mi>
+		    </m:msub>
+		  </m:msub>
+		</m:ci>
+		<m:ci>x</m:ci>
+	      </m:apply>
+	    </m:math>.
+	  </item>
+	</list>
+      </para>
+      
+    </section>
+    
+  </content>
+</document>

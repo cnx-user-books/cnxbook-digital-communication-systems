@@ -1,0 +1,61 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Homework 9 of Elec 430</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>2593efaa-6cfe-47cc-82ce-614f22abbd8c</md:uuid>
+</metadata>
+
+  <content>
+
+    <exercise id="sec1">
+      <problem id="idm734832">
+	<para id="sec1para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, Problems 4.22 and 4.28
+	</para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec2">
+      <problem id="idp655056">
+	<para id="sec2para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, Problems 4.21 and 4.25
+	</para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec3">
+      <problem id="idm1023456">
+	<para id="sec3para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, Problems 10.1 and 10.6
+	</para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec4">
+      <problem id="idm8278560">
+	<para id="sec4para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, Problems 10.8 and 10.9
+	</para>
+      </problem>
+    </exercise>
+
+    <exercise id="sec5">
+      <problem id="idm1752576">
+	<para id="sec5para">
+	  For this problem of the homework, please either make up a problem
+	  relevant to chapters 6 or 7 of the notes or find one from your text
+	  book or other books on Digital Communication, state the problem clearly
+	  and carefully and then solve. 
+	  <note type="note" id="idm669632">If you would like to choose one from your textbook,
+	    please reserve your problem on the white board in my office. (You may
+	    not pick a problem that has already been reserved.)
+	  </note>
+	  Please write the problem and its solution on separate pieces of paper
+	  so that I can easily reproduce and distribute them to others in the 
+	  class.
+	</para>
+      </problem>
+    </exercise>
+
+  </content>
+  
+</document>

@@ -1,0 +1,422 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Exercises on Systems and Density</title>
+  
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>bd9eb03b-b7b7-4949-bd4c-75426e0a4b13</md:uuid>
+</metadata>
+
+  <content>
+
+    <exercise id="prob1">
+      <problem id="idp2465504">
+      
+      <para id="prob1para1">
+        Consider the following system
+      </para>
+      
+      <figure id="prob1fig">
+        <media id="idm8014528" alt=""><image src="../../media/HW4Fig.png" mime-type="image/png"/></media>
+      </figure>
+      
+      <para id="prob1para2">
+        Assume that
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>N</m:mi>
+              <m:mi>τ</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is a white Gaussian process with zero mean and spectral height
+        <m:math>
+          <m:apply>
+            <m:divide/>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>N</m:mi>
+		<m:mn>0</m:mn>
+	      </m:msub>
+	    </m:ci>
+	    <m:cn>2</m:cn>
+          </m:apply>
+        </m:math>.
+      </para>
+      
+	<para id="prob1para3">
+	  If <m:math><m:ci>b</m:ci> </m:math> is "0" then
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>τ</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:ci>A</m:ci>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>p</m:mi>
+		      <m:mi>T</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>τ</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	  and if <m:math><m:ci>b</m:ci> </m:math> is "1" then
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>X</m:mi>
+		  <m:mi>τ</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:minus/>
+		  <m:ci>A</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>p</m:mi>
+		      <m:mi>T</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>τ</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	  where
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>p</m:mi>
+		    <m:mi>T</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>τ</m:ci>
+	      </m:apply>
+	      <m:piecewise>
+		<m:piece>
+		  <m:cn>1</m:cn>
+		  <m:apply>
+		    <m:leq/>
+		    <m:cn>0</m:cn>
+		    <m:ci>τ</m:ci>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		</m:piece>
+		<m:otherwise>
+		  <m:cn>0</m:cn>
+		</m:otherwise>
+	      </m:piecewise>
+	    </m:apply>
+	  </m:math>. Suppose
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>b</m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>b</m:ci>
+		  <m:cn>0</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:cn type="rational">1<m:sep/>2</m:cn>
+	    </m:apply>
+	  </m:math>.
+	  <list id="prob1list" list-type="enumerated">
+	    <item>Find the probability density function
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>Z</m:mi>
+		    <m:mi>T</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      when bit "0" is transmitted and also when bit "1" is transmitted.
+	      Refer to these two densities as
+	      <m:math>
+		<m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">f</m:csymbol>
+		  <m:bvar>
+		    <m:ci><m:msub>
+			<m:mi>Z</m:mi>
+			<m:mi>T</m:mi>
+		      </m:msub></m:ci>
+		      <m:condition>
+		      <m:ci><m:msub>
+			  <m:mi>H</m:mi>
+			  <m:mn>0</m:mn>
+			</m:msub></m:ci>
+		    </m:condition>
+		  </m:bvar>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:math>
+	      and
+	      <m:math>
+		<m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">f</m:csymbol>
+		  <m:bvar>
+		    <m:ci><m:msub>
+			<m:mi>Z</m:mi>
+			<m:mi>T</m:mi>
+		      </m:msub></m:ci>
+		      <m:condition>
+		      <m:ci><m:msub>
+			  <m:mi>H</m:mi>
+			  <m:mn>1</m:mn>
+			</m:msub></m:ci>
+		    </m:condition>
+		  </m:bvar>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:math>,
+	      where
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>H</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      denotes the hypothesis that bit "0" is transmitted and
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>H</m:mi>
+		    <m:mn>1</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      denotes the hypothesis that bit "1" is transmitted.
+	    </item>
+	    
+	    <item>Consider the ratio of the above two densities;
+	      <foreign>i.e.</foreign>,
+	      <equation id="eq1">
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:apply>
+		      <m:ci type="fn">Λ</m:ci>
+		      <m:ci>z</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:apply>
+			<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">f</m:csymbol>
+			<m:bvar>
+			  <m:ci><m:msub>
+			      <m:mi>Z</m:mi>
+			      <m:mi>T</m:mi>
+			    </m:msub></m:ci>
+			  <m:condition>
+			    <m:ci><m:msub>
+				<m:mi>H</m:mi>
+				<m:mn>0</m:mn>
+			      </m:msub></m:ci>
+			  </m:condition>
+			</m:bvar>
+			<m:ci>z</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#pdf">f</m:csymbol>
+			<m:bvar>
+			  <m:ci><m:msub>
+			      <m:mi>Z</m:mi>
+			      <m:mi>T</m:mi>
+			    </m:msub></m:ci>
+			  <m:condition>
+			    <m:ci><m:msub>
+				<m:mi>H</m:mi>
+				<m:mn>1</m:mn>
+			      </m:msub></m:ci>
+			  </m:condition>
+			</m:bvar>
+			<m:ci>z</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:math>
+	      </equation>
+	      and its natural log
+	      <m:math>
+		<m:apply>
+		  <m:ln/>
+		  <m:apply>
+		    <m:ci type="fn">Λ</m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>.
+	      A reasonable scheme to decide which bit was actually transmitted
+	      is to compare
+	      <m:math>
+		<m:apply>
+		  <m:ln/>
+		  <m:apply>
+		    <m:ci type="fn">Λ</m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      to a fixed threshold
+	      <m:math><m:ci>γ</m:ci></m:math>. 
+	      (<m:math>
+		<m:apply>
+		  <m:ci type="fn">Λ</m:ci>
+		  <m:ci>z</m:ci>
+		</m:apply>
+	      </m:math>
+	      is often referred to as the likelihood function and
+	      <m:math>
+		<m:apply>
+		  <m:ln/>
+		  <m:apply>
+		    <m:ci type="fn">Λ</m:ci>
+		    <m:ci>z</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      as the log likelihood function). Given threshold
+	      <m:math><m:ci>γ</m:ci></m:math> is used
+	      to decide
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:mover>
+		      <m:mi>b</m:mi>
+		      <m:mo>^</m:mo>
+		    </m:mover>
+		  </m:ci>
+		  <m:cn>0</m:cn>
+		</m:apply>
+	      </m:math>
+	      when
+	      <m:math>
+		<m:apply>
+		  <m:geq/>
+		  <m:apply>
+		    <m:ln/>
+		    <m:apply>
+		      <m:ci type="fn">Λ</m:ci>
+		      <m:ci>z</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>γ</m:ci>
+		</m:apply>
+	      </m:math>
+	      then find
+	      <m:math>
+		<m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		  <m:apply>
+		    <m:neq/>
+		    <m:ci>
+		      <m:mover>
+			<m:mi>b</m:mi>
+			<m:mo>^</m:mo>
+		      </m:mover>
+		    </m:ci>
+		    <m:ci>b</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	      (note that we will say
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:mover>
+		      <m:mi>b</m:mi>
+		      <m:mo>^</m:mo>
+		    </m:mover>
+		  </m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>
+	      when
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:ln/>
+		    <m:apply>
+		      <m:ci type="fn">Λ</m:ci>
+		      <m:ci>z</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>γ</m:ci>
+		</m:apply>
+	      </m:math>).
+	    </item>
+	    <item>Find a <m:math><m:ci>γ</m:ci></m:math> that minimizes
+	      <m:math>
+		<m:apply>
+		  <m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#probability"/>
+		  <m:apply>
+		    <m:neq/>
+		    <m:ci>
+		      <m:mover>
+			<m:mi>b</m:mi>
+			<m:mi>^</m:mi>
+		      </m:mover>
+		    </m:ci>
+		    <m:ci>b</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>.
+	    </item>
+	  </list>
+	  
+	</para>
+      </problem>
+    </exercise>
+    <exercise id="prob2">
+      <problem id="idp640944">
+      
+	<para id="prob2para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, problems 7.7, 7.17, and 7.19
+	</para>
+      </problem>
+    </exercise>
+    
+    <exercise id="prob3">
+      <problem id="idm6208096">
+	<para id="prob3para">
+	  <cite><cite-title>Proakis and Salehi</cite-title></cite>, problem 7.20, 7.28, and 7.23
+	</para>
+      </problem>
+    </exercise>
+    
+  </content>
+  
+</document>

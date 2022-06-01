@@ -1,0 +1,209 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  
+  <title>Performance Analysis</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>36c6e1f7-50f0-4115-8e39-cf7dd5058347</md:uuid>
+</metadata>
+
+  <content>    
+    <para id="para1">
+      In this section we will evaluate the probability of error of
+      both correlator type receivers and matched filter receivers.  We
+      will only present the analysis for transmission of binary
+      symbols.  In the process we will demonstrate that both of these
+      receivers have identical bit-error probabilities.
+    </para>
+
+    <section id="s1">
+      <title>Antipodal Signals</title>
+
+      <para id="para2">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>
+              <m:msub>
+                <m:mi>r</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+            <m:apply>
+              <m:plus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mi>m</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>N</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+	for 
+	<m:math>
+	  <m:apply>
+	    <m:leq/>
+            <m:cn>0</m:cn>
+            <m:ci>t</m:ci>
+            <m:ci>T</m:ci>
+	  </m:apply>
+	</m:math>
+	with
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>m</m:ci>
+            <m:cn>1</m:cn>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>m</m:ci>
+            <m:cn>2</m:cn>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:apply>
+              <m:ci type="fn">
+                <m:msub>
+                  <m:mi>s</m:mi>
+                  <m:mn>1</m:mn>
+                </m:msub>
+              </m:ci>
+              <m:ci>t</m:ci>
+            </m:apply>
+            <m:apply>
+              <m:minus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mn>2</m:mn>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+
+      </para>
+
+      <para id="para3">
+	An analysis of the performance of correlation receivers with
+	antipodal binary signals can be found <link document="m10152">here</link>.  A similar analysis for matched
+	filter receivers can be found <link document="m10153">here</link>.
+      </para>
+
+    </section>
+
+    <section id="s2">
+      <title>Orthogonal Signals</title>
+
+      <para id="para4">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>
+              <m:msub>
+                <m:mi>r</m:mi>
+                <m:mi>t</m:mi>
+              </m:msub>
+            </m:ci>
+            <m:apply>
+              <m:plus/>
+	      <m:apply>
+		<m:ci type="fn">
+		  <m:msub>
+		    <m:mi>s</m:mi>
+		    <m:mi>m</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>N</m:mi>
+		  <m:mi>t</m:mi>
+		</m:msub>
+	      </m:ci>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+	for
+	<m:math>
+	  <m:apply>
+	    <m:leq/>
+            <m:cn>0</m:cn>
+            <m:ci>t</m:ci>
+            <m:ci>T</m:ci>
+	  </m:apply>
+	</m:math>
+	with
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>m</m:ci>
+            <m:cn>1</m:cn>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:ci>m</m:ci>
+            <m:cn>2</m:cn>
+	  </m:apply>
+	</m:math>
+	and
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:apply>
+              <m:scalarproduct/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>1</m:mn>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>s</m:mi>
+		  <m:mn>2</m:mn>
+		</m:msub>
+	      </m:ci>
+            </m:apply>
+            <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+
+      </para>
+
+      <para id="para5">
+	An analysis of the performance of correlation receivers with
+	orthogonal binary signals can be found <link document="m10154">here</link>.  A similar analysis for matched
+	filter receivers can be found <link document="m10155">here</link>.
+      </para>
+
+    </section>
+
+    <para id="para6">
+      It can be shown in general that correlation and matched filter
+      receivers perform with the same symbol error probability if the
+      detection criteria is the same for both receivers.
+    </para>
+  </content>
+</document>

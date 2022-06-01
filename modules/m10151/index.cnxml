@@ -1,0 +1,1029 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+
+  <title>Matched Filters in the Frequency Domain</title>
+
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>c501d3d7-c2ea-471a-8883-4a7377fe13f0</md:uuid>
+</metadata>
+
+  <content>
+    <section id="s1">
+      
+
+      <para id="para0">
+	The time domain analysis and implementation of matched filters
+	can be found in <link document="m10101" strength="3">Matched
+	Filters</link>.
+      </para>
+
+      <para id="para1">
+	A frequency domain interpretation of matched filters is very
+	useful
+
+	<equation id="eq01">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:ci>SNR</m:ci>
+              <m:apply>
+                <m:divide/>
+		<m:apply>
+		  <m:power/>
+		  <m:apply>
+		    <m:int/>
+		    <m:bvar>
+		      <m:ci>τ</m:ci>
+		    </m:bvar>
+		    <m:lowlimit>
+		      <m:apply>
+			<m:minus/>
+			<m:infinity/>
+		      </m:apply>
+		    </m:lowlimit>
+		    <m:uplimit>
+		      <m:infinity/>
+		    </m:uplimit>
+		    <m:apply>
+		      <m:times/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>s</m:mi>
+			    <m:mi>m</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>τ</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>h</m:mi>
+			    <m:mi>m</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:apply>
+			  <m:minus/>
+			  <m:ci>T</m:ci>
+			  <m:ci>τ</m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>N</m:mi>
+			<m:mn>0</m:mn>
+		      </m:msub>
+		    </m:ci>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:int/>
+		    <m:bvar>
+		      <m:ci>τ</m:ci>
+		    </m:bvar>
+		    <m:lowlimit>
+		      <m:apply>
+			<m:minus/>
+			<m:infinity/>
+		      </m:apply>
+		    </m:lowlimit>
+		    <m:uplimit>
+		      <m:infinity/>
+		    </m:uplimit>
+		    <m:apply>
+		      <m:power/>
+		      <m:apply>
+			<m:abs/>
+			<m:apply>
+			  <m:ci type="fn">
+			    <m:msub>
+			      <m:mi>h</m:mi>
+			      <m:mi>m</m:mi>
+			    </m:msub>
+			  </m:ci>
+			  <m:apply>
+			    <m:minus/>
+			    <m:ci>T</m:ci>
+			    <m:ci>τ</m:ci>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		      <m:cn>2</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+        For the <m:math><m:ci>m</m:ci></m:math>-th filter,
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>h</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        can be expressed as
+
+	<equation id="eq02">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+		  <m:mover>
+		    <m:msub>
+                      <m:mi>s</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		    <m:mo>˜</m:mo>
+		  </m:mover>
+                </m:ci>
+                <m:ci>T</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>τ</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>s</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>τ</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>h</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:minus/>
+		      <m:ci>T</m:ci>
+		      <m:ci>τ</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+              <m:apply>
+		<m:apply>
+		  <m:inverse/>
+		  <m:mo>ℱ</m:mo>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>H</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>S</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		      <m:ci>f</m:ci>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	      <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>f</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>H</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>S</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:exp/>
+		    <m:apply>
+		      <m:times/>
+		      <m:imaginaryi/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		      <m:ci>T</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+        where the second equality is because
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mover>
+                <m:mi>s</m:mi>
+                <m:mo>~</m:mo>
+              </m:mover>
+              <m:mi>m</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        is the filter output with input
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>S</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        and filter
+        <m:math>
+          <m:ci>
+            <m:msub>
+              <m:mi>H</m:mi>
+              <m:mi>m</m:mi>
+            </m:msub>
+          </m:ci>
+        </m:math>
+        and we can now define
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+            <m:apply>
+              <m:ci type="fn">
+		<m:mover>
+		  <m:msub>
+                    <m:mi>H</m:mi>
+		    <m:mi>m</m:mi>
+		  </m:msub>
+		  <m:mi>^</m:mi>
+		</m:mover>
+              </m:ci>
+              <m:ci>f</m:ci>
+            </m:apply>
+            <m:apply>
+              <m:times/>
+	      <m:apply>
+		<m:conjugate/>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>H</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:exp/>
+		<m:apply>
+		  <m:minus/>
+		  <m:apply>
+		    <m:times/>
+		    <m:imaginaryi/>
+		    <m:cn>2</m:cn>
+		    <m:pi/>
+		    <m:ci>f</m:ci>
+		    <m:ci>T</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+            </m:apply>
+	  </m:apply>
+	</m:math>
+
+	, then
+
+	<equation id="eq04">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+		  <m:mover>
+		    <m:msub>
+                      <m:mi>s</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		    <m:mi>˜</m:mi>
+		  </m:mover>
+                </m:ci>
+                <m:ci>T</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:scalarproduct/>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>S</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mover>
+			<m:mi>H</m:mi>
+			<m:mi>^</m:mi>
+		      </m:mover>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+      </para>
+
+      <para id="para2">
+	The denominator
+
+	<equation id="eq05">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>τ</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:power/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>h</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:apply>
+			<m:minus/>
+			<m:ci>T</m:ci>
+			<m:ci>τ</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>2</m:cn>
+		</m:apply>
+              </m:apply>
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>τ</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:power/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>h</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>τ</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>2</m:cn>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	<equation id="eq06">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#convolve"/>
+		<m:ci><m:msub>
+                    <m:mi>h</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub></m:ci>
+		<m:apply>
+		  <m:ci type="fn"><m:msub>
+		      <m:mi>h</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub></m:ci>
+                  <m:cn>0</m:cn>
+		</m:apply>
+	      </m:apply>
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>f</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:power/>
+		  <m:apply>
+		    <m:abs/>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>H</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>f</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>2</m:cn>
+		</m:apply>
+              </m:apply>
+              <m:apply>
+                <m:scalarproduct/>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>H</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>H</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	<equation id="eq07">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:csymbol definitionURL="http://cnx.rice.edu/cd/cnxmath.ocd#convolve"/>
+		<m:ci><m:msub>
+                    <m:mi>h</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub></m:ci>
+		<m:apply>
+		  <m:ci type="fn"><m:msub>
+		      <m:mi>h</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub></m:ci>
+                  <m:cn>0</m:cn>
+		</m:apply>
+	      </m:apply>
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>f</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit>
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>H</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:exp/>
+		    <m:apply>
+		      <m:times/>
+		      <m:imaginaryi/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		      <m:ci>T</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:conjugate/>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>H</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>f</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:exp/>
+		    <m:apply>
+		      <m:minus/>
+		      <m:apply>
+			<m:times/>
+			<m:imaginaryi/>
+			<m:cn>2</m:cn>
+			<m:pi/>
+			<m:ci>f</m:ci>
+			<m:ci>T</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	      <m:apply>
+                <m:scalarproduct/>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:mover>
+		      <m:msub>
+			<m:mi>H</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		      <m:mo>^</m:mo>
+		    </m:mover>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:mover>
+		      <m:msub>
+			<m:mi>H</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		      <m:mo>^</m:mo>
+		    </m:mover>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	Therefore,
+
+	<equation id="eq09">
+	  <m:math>
+	    <m:apply>
+	      <m:leq/>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>SNR</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:power/>
+		    <m:apply>
+		      <m:scalarproduct/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>S</m:mi>
+			    <m:mi>m</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:mover>
+			    <m:msub>
+			      <m:mi>H</m:mi>
+			      <m:mi>m</m:mi>
+			    </m:msub>
+			    <m:mo>^</m:mo>
+			  </m:mover>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>N</m:mi>
+			  <m:mn>0</m:mn>
+			</m:msub>
+		      </m:ci>
+		      <m:cn>2</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:scalarproduct/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:mover>
+			    <m:msub>
+			      <m:mi>H</m:mi>
+			      <m:mi>m</m:mi>
+			    </m:msub>
+			    <m:mo>^</m:mo>
+			  </m:mover>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:mover>
+			    <m:msub>
+			      <m:mi>H</m:mi>
+			      <m:mi>m</m:mi>
+			    </m:msub>
+			    <m:mo>^</m:mo>
+			  </m:mover>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:divide/>
+		  <m:cn>2</m:cn>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>N</m:mi>
+		      <m:mn>0</m:mn>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:scalarproduct/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>S</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>S</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	with equality when
+
+	<equation id="eq11">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+		  <m:mover>
+		    <m:msub>
+                      <m:mi>H</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		    <m:mo>^</m:mo>
+		  </m:mover>
+                </m:ci>
+                <m:ci>f</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:times/>
+		<m:ci>α</m:ci>
+		<m:apply>
+		  <m:ci type="fn">
+		    <m:msub>
+		      <m:mi>S</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>f</m:ci>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	or
+
+	<equation id="eq12">
+	  <title>Matched Filter in the frequency domain</title>
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+                  <m:msub>
+                    <m:mi>H</m:mi>
+                    <m:mi>m</m:mi>
+                  </m:msub>
+                </m:ci>
+                <m:ci>f</m:ci>
+              </m:apply>
+              <m:apply>
+                <m:times/>
+		<m:apply>
+		  <m:conjugate/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>S</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:exp/>
+		  <m:apply>
+		    <m:minus/>
+		    <m:apply>
+		      <m:times/>
+		      <m:imaginaryi/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		      <m:ci>T</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>       
+
+      </para>
+
+      <figure id="fig1">
+	<title>Matched Filter</title>
+	<media id="idm7452944" alt=""><image src="../../media/Figure4-31.png" mime-type="image/png"/></media>
+      </figure>
+
+      <para id="para3">
+
+	<equation id="eq13">
+	  <!-- Delayed by T -->
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+              <m:apply>
+                <m:ci type="fn">
+		  <m:mover>
+		    <m:msub>
+                      <m:mi>s</m:mi>
+		      <m:mi>m</m:mi>
+		    </m:msub>
+		    <m:mo>˜</m:mo>
+		  </m:mover>
+                </m:ci>
+                <m:ci>t</m:ci>
+              </m:apply>
+              <m:apply>
+		<m:apply>
+		  <m:inverse/>
+		  <m:ci><m:mo>ℱ</m:mo></m:ci>
+		</m:apply>
+                <m:apply>
+                  <m:times/>
+		  <m:apply>
+		    <m:ci type="fn">
+		      <m:msub>
+			<m:mi>s</m:mi>
+			<m:mi>m</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>f</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:conjugate/>
+		    <m:apply>
+		      <m:ci type="fn">
+			<m:msub>
+			  <m:mi>s</m:mi>
+			  <m:mi>m</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>f</m:ci>
+		    </m:apply>
+		  </m:apply>
+                </m:apply>
+              </m:apply>
+	      <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>f</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit> 
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:power/>
+		    <m:apply>
+		      <m:abs/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>s</m:mi>
+			    <m:mi>m</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:exp/>
+		    <m:apply>
+		      <m:times/>
+		      <m:imaginaryi/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	      <!--Also delayed by T -->
+	      <!-- Max value at t=0 -->
+
+              <m:apply>
+                <m:int/>
+		<m:bvar>
+		  <m:ci>f</m:ci>
+		</m:bvar>
+		<m:lowlimit>
+		  <m:apply>
+		    <m:minus/>
+		    <m:infinity/>
+		  </m:apply>
+		</m:lowlimit> 
+		<m:uplimit>
+		  <m:infinity/>
+		</m:uplimit>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:power/>
+		    <m:apply>
+		      <m:abs/>
+		      <m:apply>
+			<m:ci type="fn">
+			  <m:msub>
+			    <m:mi>s</m:mi>
+			    <m:mi>m</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>f</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:cos/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:pi/>
+		      <m:ci>f</m:ci>
+		      <m:ci>t</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+              </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+        where 
+        <m:math>
+          <m:apply>
+            <m:inverse/>
+	    <m:ci><m:mo>ℱ</m:mo></m:ci>
+          </m:apply>
+        </m:math>
+        is the inverse Fourier Transform operator.
+
+      </para>
+    </section>
+
+  </content>
+</document>
