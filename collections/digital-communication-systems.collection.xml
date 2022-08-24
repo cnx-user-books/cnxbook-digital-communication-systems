@@ -1,12 +1,13 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:md="http://cnx.rice.edu/mdml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" authors="Behnaam Aazhang">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
     <md:content-id>col10134</md:content-id>
     <md:title>Digital Communication Systems</md:title>
     <md:language>en</md:language>
     <md:license url="http://creativecommons.org/licenses/by/1.0">Creative Commons Attribution License</md:license>
     <md:uuid>5d9b8dcb-5cc0-44dd-a10e-aceed3a53eed</md:uuid>
-<md:slug>digital-communication-systems</md:slug>
-</metadata>
+    <md:slug>digital-communication-systems</md:slug>
+  </metadata>
   <col:content>
     <col:subcollection>
       <md:title>Chapter 1</md:title>
